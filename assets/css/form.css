@@ -1,0 +1,74 @@
+body {
+    font-family: "Chakra Petch", sans-serif;
+}
+#feedback {
+    height:40px;
+}
+
+main {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+header {
+    margin-top:125px;
+    width:100%;
+}
+
+#logo {
+    text-align:center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom:0px;
+    margin-top:0px;
+    letter-spacing:7.75px;
+    width:230px;
+    display:inline;
+}
+h3 {
+    border-color: black;
+    border:dashed;
+    border-top:1px;
+    border-bottom:1px;
+    border-left:none;
+    border-right:none;
+    font-size:8px;
+    margin-bottom:0px;
+    letter-spacing:10px;
+}
+h5 {
+    margin-top:0px;
+    font-size:10px;
+    letter-spacing:5px;
+}
+
+#form-container {
+    border:solid;
+    border-width:1px;
+    padding:20px;
+    font-size:10px;
+}
+
+input {
+    background-color: white;
+    border:none;
+    border-bottom:dashed 1px;
+    margin-bottom:10px;
+}
+
+textarea {
+    resize:none;
+    width:96%;
+    height:200px;
+}
+
+#submit {
+    margin:0 auto;
+    font-family: "Chakra Petch", sans-serif;
+    width:99%;
+    border-bottom:none;
+}
