@@ -5,6 +5,7 @@ const titleInput = document.querySelector('#title');
 const postInput = document.querySelector('#postbody');
 const submitButton = document.querySelector('#submit');
 const feedback = document.querySelector('#feedback');
+const access = document.querySelector('h3');
 
 let posts;
 
@@ -45,6 +46,9 @@ submitButton.addEventListener('click', function (event) {
     } else {
         giveFeedback('success', 'MESSAGE SUBMITTED.');
         capPost();
+        access.style.color = 'aquamarine';
+        access.style.color = 'black';
+        access.style.color = 'aquamarine';
         window.location.href = "posts.html";
     }
 });

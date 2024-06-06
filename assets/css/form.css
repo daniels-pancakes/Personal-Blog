@@ -1,6 +1,11 @@
+html {
+    height: 100%;
+}
 body {
     font-family: "Chakra Petch", sans-serif;
 }
+
+
 #feedback {
     height:40px;
 }
@@ -10,10 +15,12 @@ main {
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+    align-items: stretch;
+    perspective: 100px;
 }
 
 header {
-    margin-top:125px;
+    margin-top:80px;
     width:100%;
 }
 
@@ -22,14 +29,55 @@ header {
     margin: 0 auto;
 }
 
+@keyframes blinkappear{
+    0% {
+      opacity:0;
+    }
+    33% {
+        opacity:1;
+      }
+    66% {
+      opacity:0;
+    }
+    100% {
+        opacity:1;
+      }
+  }
+
+  @keyframes maximize{
+    0% {
+    opacity:0;
+    }
+    10% {
+    opacity:1;
+    }
+    20% {
+    opacity:0;
+    }
+    30% {
+    opacity:1;
+    }
+    40% {
+    height:10px;
+    opacity:1;
+    }
+    100% {
+    height:380px;
+    opacity:1;
+    }
+  }
+
 h1 {
+    opacity: 0;
     margin-bottom:0px;
     margin-top:0px;
     letter-spacing:7.75px;
     width:230px;
     display:inline;
+    animation: blinkappear 0.125s forwards 0.5s;
 }
 h3 {
+    opacity:0;
     border-color: black;
     border:dashed;
     border-top:1px;
@@ -39,25 +87,66 @@ h3 {
     font-size:8px;
     margin-bottom:0px;
     letter-spacing:10px;
+    animation: blinkappear 0.125s forwards 1.5s;
 }
 h5 {
+    opacity:0;
     margin-top:0px;
     font-size:10px;
     letter-spacing:5px;
+    animation: blinkappear 0.125s forwards 0.75s;
+}
+
+#form {
+    opacity:0;
+    animation: blinkappear 0.125s forwards 2.5s;
 }
 
 #form-container {
+    opacity:0;
+    height:0px;
+    position:relative;
     border:solid;
     border-width:1px;
     padding:20px;
     font-size:10px;
+    z-index:1;
+    background-color:white;
+    transition: box-shadow 0.5s;
+    animation: maximize 0.5s forwards 2s;
 }
+
+#form-container:hover {
+    box-shadow: 0px 0px 5px aquamarine;
+}
+
+
+.bgboxcontainer {
+    perspective: 200px;
+    perspective-origin: 50% 50%;
+}
+.bgbox {
+    visibility: hidden;
+    transform: translate3d();
+    border:solid 1px;
+    color:aquamarine;
+    /* color:rgb(255, 98, 0); */
+    z-index:0;
+    position:absolute;
+    width:222px;
+    height:420px;
+    top:28.6%;
+    left:39.65%;
+    }
 
 input {
     background-color: white;
-    border:none;
-    border-bottom:dashed 1px;
+    border-top:solid 1px;
+    border-right:solid 1px;
+    border-left:solid 1px;
+    border-bottom:solid 1px;
     margin-bottom:10px;
+    width:96%;
 }
 
 textarea {
@@ -70,5 +159,4 @@ textarea {
     margin:0 auto;
     font-family: "Chakra Petch", sans-serif;
     width:99%;
-    border-bottom:none;
 }
