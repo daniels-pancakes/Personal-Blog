@@ -1,7 +1,22 @@
 body {
     font-family: "Chakra Petch", sans-serif;
     margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
+
+body.dark  {
+    font-family: "Chakra Petch", sans-serif;
+    margin:0;
+    background-color: black;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
 #feedback {
     height:40px;
 }
@@ -11,29 +26,47 @@ main {
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+    align-content: space-around;
 }
 
 article {
-margin-top:20px;
-border:solid 1px;
-width:90%;
-padding:10px;
+    margin-top:20px;
+    border:solid 1px;
+    width:90%;
+    padding:10px;
+    margin-left:20px;
+    margin-right:20px;
 }
 
 .subject {
-    margin-top:20px;
+    margin-top:5px;
     background-color: black;
     color:white;
     font-size:30px;
     margin-bottom:5px;
-    letter-spacing:6px;
+    letter-spacing:3px;
     padding-left:20px;
+    padding-right:20px;
+    font-weight:600;
+    line-height:32px;
+}
+
+.dark .subject {
+    margin-top:5px;
+    background-color: white;
+    color:black;
+    font-size:30px;
+    margin-bottom:5px;
+    letter-spacing:3px;
+    padding-left:20px;
+    padding-right:20px;
+    font-weight:600;
 }
 
 .handle-date {
     font-size:12px;
     font-weight:600;
-    letter-spacing:6px;
+    letter-spacing:2px;
     padding-left:20px;
     margin-top:10px;
 }
@@ -42,9 +75,13 @@ padding:10px;
     margin-top:10px;
     border:solid 1px;
     padding-left:20px;
+    padding-right:20px;
     margin-bottom:20px;
     padding-top:10px;
     padding-bottom:10px;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+    line-height:26px;
 }
 
 header {
@@ -72,12 +109,25 @@ nav {
 #toggle-mode {
     font-size:10px;
     background-color: white;
-
 }
 
 #return {
     font-size:10px;
     background-color: white;
+}
+
+.dark #toggle-mode {
+    font-size:10px;
+    background-color: black;
+    color:white;
+    border:solid 1px white;
+}
+
+.dark #return {
+    font-size:10px;
+    background-color: black;
+    color:white;
+    border:solid 1px white;
 }
 
 h1 {
@@ -95,8 +145,20 @@ h3 {
     font-size:8px;
     margin-bottom:0px;
     letter-spacing:10px;
-
 }
+
+h3.dark  {
+    border-color: white;
+    border:dashed;
+    border-top:1px;
+    border-bottom:1px;
+    border-left:none;
+    border-right:none;
+    font-size:8px;
+    margin-bottom:0px;
+    letter-spacing:10px;
+}
+
 h5 {
     margin-top:0px;
     font-size:10px;
@@ -105,6 +167,13 @@ h5 {
 
 #form-container {
     border:solid;
+    border-width:1px;
+    padding:20px;
+    font-size:10px;
+}
+
+.dark #form-container {
+    border:solid white;
     border-width:1px;
     padding:20px;
     font-size:10px;
@@ -127,4 +196,48 @@ textarea {
     font-family: "Chakra Petch", sans-serif;
     width:99%;
     border-bottom:none;
+}
+
+footer {
+    top:100%;
+    margin-top:40px;
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin-top:auto;
+}
+
+.dark footer {
+    top:100%;
+    margin-top:40px;
+    background-color: white;
+    color:black;
+    text-align:center;
+    padding:10px;
+    margin-top:auto;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+}
+
+a.dark {
+    text-decoration:none;
+    color:black;
+}
+
+@media screen and (min-width:768px) {
+    article {
+        width:40%;
+    }
+    
+}
+
+@media screen and (min-width:968px) {
+    article {
+        width:41%;
+    }
+    
 }

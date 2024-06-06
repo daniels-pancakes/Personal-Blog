@@ -7,12 +7,17 @@ const submitButton = document.querySelector('#submit');
 const feedback = document.querySelector('#feedback');
 const access = document.querySelector('h3');
 
+let mode;
+if (localStorage.getItem('mode') === null) {
+    localStorage.setItem('mode', 'lightMode');
+    let mode = localStorage.getItem('mode');
+} else if (localStorage.getItem('mode') === 'lightMode') {}
+else if (localStorage.getItem('mode') === 'darkMode') {};
 let posts;
 
 if (localStorage.getItem('posts') !== null) {
 posts = JSON.parse(localStorage.getItem('posts'));}
 else { posts = [];}
-
 
 function capPost() {
     const post = {
