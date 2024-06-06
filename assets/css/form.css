@@ -140,6 +140,7 @@ h5 {
     }
 
 input {
+    border-radius:0;
     background-color: white;
     border-top:solid 1px;
     border-right:solid 1px;
@@ -147,16 +148,60 @@ input {
     border-bottom:solid 1px;
     margin-bottom:10px;
     width:96%;
+    color:black;
+    transition: box-shadow 0.5s;
+}
+
+.dark input {
+    border-radius:0;
+    background-color: white;
+    border-top:solid 1px;
+    border-right:solid 1px;
+    border-left:solid 1px;
+    border-bottom:solid 1px;
+    margin-bottom:10px;
+    width:96%;
+    color:black;
+    transition: box-shadow 0.5s;
+}
+
+input[type=text]:focus {
+    outline:none;
+    box-shadow: 0px 0px 5px aquamarine;
+}
+
+.dark input[type=text]:focus {
+    outline:none;
+    box-shadow: 0px 0px 5px aquamarine;
 }
 
 textarea {
     resize:none;
     width:96%;
     height:200px;
+    transition: box-shadow 0.5s;
+}
+
+.dark textarea:focus {
+    outline:none;
+    box-shadow: 0px 0px 5px aquamarine;
+}
+
+.dark textarea:focus {
+    outline:none;
+    box-shadow: 0px 0px 5px aquamarine;
 }
 
 #submit {
     margin:0 auto;
     font-family: "Chakra Petch", sans-serif;
     width:99%;
+}
+
+#submit:hover {
+    box-shadow: 0px 0px 5px aquamarine;
+}
+
+.dark #submit:hover {
+    box-shadow: 0px 0px 5px aquamarine;
 }
