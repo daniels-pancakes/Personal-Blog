@@ -31,13 +31,25 @@ main {
 }
 
 article {
-    margin-top:20px;
+    margin-top:10px;
     border:solid 1px;
     width:90%;
     padding:10px;
-    margin-left:20px;
-    margin-right:20px;
-    box-shadow:5 5 5 5;
+    margin-left:15px;
+    margin-right:15px;
+    box-shadow:10px 10px 0px 0px black;
+    margin-bottom:20px;
+}
+
+.dark .holder {
+    margin-top:10px;
+    border:solid 1px;
+    width:90%;
+    padding:10px;
+    margin-left:15px;
+    margin-right:15px;
+    box-shadow:10px 10px 0px 0px rgba(184, 92, 17, 0.339);
+    margin-bottom:20px;
 }
 
 .subject {
@@ -49,20 +61,33 @@ article {
     letter-spacing:3px;
     padding-left:20px;
     padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
     font-weight:600;
     line-height:32px;
+    border-width:5px;
+    border-style:inset;
 }
 
 .dark .subject {
     margin-top:5px;
-    background-color: rgb(255, 140, 0);
-    color:black;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 140, 0);
     font-size:30px;
     margin-bottom:5px;
     letter-spacing:3px;
     padding-left:20px;
     padding-right:20px;
     font-weight:600;
+    border-color:rgb(0, 0, 0);
+    border-top-color:rgb(184, 92, 17);
+    border-left-color:rgb(222, 114, 25);
+    border-right-color:rgb(208, 97, 23);
+    border-bottom-color:rgb(197, 90, 19);
+    padding-top:10px;
+    padding-bottom:10px;
+    border-width:5px;
+    border-style:inset;
 }
 
 .handle-date {
@@ -91,16 +116,35 @@ header {
     margin-top:0;
     width:100%;
     border-bottom:solid 1px;
+    background:
+    radial-gradient(circle at 50%, rgba(255, 255, 255, 0.224), white 50%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%),
+    repeating-linear-gradient(0.25turn, rgb(7, 255, 201) 2px, transparent 3px, transparent 20px),
+    repeating-linear-gradient(0.5turn, rgb(7, 255, 201) 2px, transparent 3px, transparent 20px);
+    background-color:white;
+    margin-bottom:10px;
+}
+
+header.dark {
+    display:flex;
+    margin-top:0;
+    width:100%;
+    border-bottom:solid 1px;
+    background:
+    radial-gradient(circle at 50%, rgba(255, 115, 0, 0.224), rgb(1, 1, 1) 50%, rgb(0, 0, 0) 100%, rgb(220, 84, 0) 100%),
+    repeating-linear-gradient(0.25turn, rgb(154, 72, 1) 2px, transparent 3px, transparent 20px),
+    repeating-linear-gradient(0.5turn, rgb(154, 72, 1) 2px, transparent 3px, transparent 20px);
+    background-color:black;    
 }
 
 nav {
     width:25%;
     max-width:100px;
-    display:flex;
+    position:absolute;
+    display:block;
     flex-wrap:wrap;
     flex-direction:column;
-    justify-content:space-evenly;
-
+    align-self:center;
+    justify-content: flex-end;
 }
 
 #logo {
@@ -108,14 +152,24 @@ nav {
     margin: 0 auto;
 }
 
+.dark #logo {
+    text-shadow: 2px 2px black;
+}
+
 #toggle-mode {
+    margin:5px;
+    margin-left:15px;
     font-size:10px;
     background-color:white;
+    width:100%;
 }
 
 #return {
+    margin:5px;
+    margin-left:15px;
     font-size:10px;
     background-color:white;
+    width:100%;
 }
 
 .dark #toggle-mode {
@@ -213,11 +267,16 @@ footer {
 .dark footer {
     top:100%;
     margin-top:40px;
-    background-color: rgb(255, 140, 0);
-    color:black;
+    background-color:black;
+    color:rgb(255, 140, 0);
     text-align:center;
     padding:10px;
     margin-top:auto;
+    border:solid 1px;
+    border-color:rgb(255, 140, 0);
+    border-right:none;
+    border-left:none;
+    border-bottom:none;
 }
 
 a {
@@ -227,12 +286,23 @@ a {
 
 a.dark {
     text-decoration:none;
-    color:black;
+    color:rgb(255, 140, 0);
 }
 
 @media screen and (min-width:768px) {
     article {
         width:40%;
+    }
+
+    .dark .holder {
+        margin-top:10px;
+        border:solid 1px;
+        width:40%;
+        padding:10px;
+        margin-left:15px;
+        margin-right:15px;
+        box-shadow:10px 10px 0px 0px rgba(184, 92, 17, 0.339);
+        margin-bottom:20px;
     }
     
 }
@@ -240,6 +310,17 @@ a.dark {
 @media screen and (min-width:968px) {
     article {
         width:41%;
+    }
+
+    .dark .holder {
+        margin-top:10px;
+        border:solid 1px;
+        width:41%;
+        padding:10px;
+        margin-left:15px;
+        margin-right:15px;
+        box-shadow:10px 10px 0px 0px rgba(184, 92, 17, 0.339);
+        margin-bottom:20px;
     }
     
 }
