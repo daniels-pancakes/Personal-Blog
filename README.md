@@ -42,6 +42,14 @@ WHEN I view the footer,
 THEN I am presented with a link to the developer's portfolio.
 ```
 
+## Usage
+
+To view the webpage please visit the following link.
+[Link](https://daniels-pancakes.github.io/Personal-Blog/)
+
+There are additional comments within the JavaScript code. There are comments throughout the GitHub repository commits.
+[Link](https://github.com/daniels-pancakes/Personal-Blog/)
+
 ## Preview
 
 ![User Input screen (Light Mode)](./assets/images/lightform.png)
