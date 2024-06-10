@@ -92,7 +92,6 @@ modeButton.addEventListener('click', function () {
         modeButton.classList.remove('dark');
         footer.classList.remove('dark');
         anchor.classList.remove('dark');
-        articleEl.classList.remove('dark');
         localStorage.setItem('mode', 'lightMode');
         modeButton.textContent = 'DARK MODE';
         }        
