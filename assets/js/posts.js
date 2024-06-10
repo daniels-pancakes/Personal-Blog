@@ -6,6 +6,8 @@ const modeButton = document.querySelector('#toggle-mode');
 const body = document.querySelector('body');
 const footer = document.querySelector('footer');
 const anchor = document.querySelector('a');
+const header = document.querySelector('header');
+const articleEl = document.querySelector('article');
 let subject = document.querySelector('.subject');
 
 // Initialization to first check if Dark/Light Mode preference settings exist.
@@ -16,6 +18,7 @@ if (localStorage.getItem('mode') === null) {
     let mode = localStorage.getItem('mode');
 } else if (localStorage.getItem('mode') === 'darkMode') {
     body.classList.add('dark');
+    header.classList.add('dark');
     returnButton.classList.add('dark');
     modeButton.classList.add('dark');
     anchor.classList.add('dark');
@@ -49,6 +52,7 @@ for (let i = 0; i < posts.length; i++) {
     const postSubject = document.createElement('div')
     const postHandleDate = document.createElement('div')
     const postContent = document.createElement('div')
+    article.className = 'holder';
     postSubject.className = 'subject';
     postHandleDate.className = 'handle-date';
     postContent.className = 'post-content';
@@ -73,6 +77,7 @@ returnButton.addEventListener('click', function () {
 modeButton.addEventListener('click', function () {
     if (localStorage.getItem('posts') === null && localStorage.getItem('mode') === 'lightMode') {
         body.classList.add('dark');
+        header.classList.add('dark');
         returnButton.classList.add('dark');
         modeButton.classList.add('dark');
         footer.classList.add('dark');
@@ -82,16 +87,20 @@ modeButton.addEventListener('click', function () {
         }
     else if (localStorage.getItem('posts') === null && localStorage.getItem('mode') === 'darkMode') {
         body.classList.remove('dark');
+        header.classList.remove('dark');
         returnButton.classList.remove('dark');
         modeButton.classList.remove('dark');
         footer.classList.remove('dark');
         anchor.classList.remove('dark');
+        articleEl.classList.remove('dark');
         localStorage.setItem('mode', 'lightMode');
         modeButton.textContent = 'DARK MODE';
         }        
     else if (localStorage.getItem('mode') === 'darkMode') {
         body.classList.remove('dark');
+        header.classList.remove('dark');
         document.querySelector('.subject').classList.remove('dark');
+        document.querySelector('.holder').classList.remove('dark');
         returnButton.classList.remove('dark');
         modeButton.classList.remove('dark');
         footer.classList.remove('dark');
@@ -101,7 +110,9 @@ modeButton.addEventListener('click', function () {
         }
     else if (localStorage.getItem('mode') === 'lightMode') {
         body.classList.add('dark');
+        header.classList.add('dark');
         document.querySelector('.dark .subject').classList.add('dark');
+        document.querySelector('.holder').classList.add('dark');
         returnButton.classList.add('dark');
         modeButton.classList.add('dark');
         footer.classList.add('dark');
