@@ -4,16 +4,17 @@ body {
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    
 }
 
 body.dark  {
     font-family: "Chakra Petch", sans-serif;
     margin:0;
-    background-color: black;
-    color:white;
+    color:rgb(255, 140, 0);
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    background-color: black;
 }
 
 
@@ -36,6 +37,7 @@ article {
     padding:10px;
     margin-left:20px;
     margin-right:20px;
+    box-shadow:5 5 5 5;
 }
 
 .subject {
@@ -53,7 +55,7 @@ article {
 
 .dark .subject {
     margin-top:5px;
-    background-color: white;
+    background-color: rgb(255, 140, 0);
     color:black;
     font-size:30px;
     margin-bottom:5px;
@@ -108,26 +110,26 @@ nav {
 
 #toggle-mode {
     font-size:10px;
-    background-color: white;
+    background-color:white;
 }
 
 #return {
     font-size:10px;
-    background-color: white;
+    background-color:white;
 }
 
 .dark #toggle-mode {
     font-size:10px;
     background-color: black;
-    color:white;
-    border:solid 1px white;
+    color:rgb(255, 140, 0);
+    border:solid 1px rgb(255, 140, 0);
 }
 
 .dark #return {
     font-size:10px;
     background-color: black;
-    color:white;
-    border:solid 1px white;
+    color:rgb(255, 140, 0);
+    border:solid 1px rgb(255, 140, 0);
 }
 
 h1 {
@@ -148,7 +150,7 @@ h3 {
 }
 
 h3.dark  {
-    border-color: white;
+    border-color: rgb(255, 140, 0);
     border:dashed;
     border-top:1px;
     border-bottom:1px;
@@ -173,7 +175,7 @@ h5 {
 }
 
 .dark #form-container {
-    border:solid white;
+    border:solid rgb(255, 140, 0);
     border-width:1px;
     padding:20px;
     font-size:10px;
@@ -211,7 +213,7 @@ footer {
 .dark footer {
     top:100%;
     margin-top:40px;
-    background-color: white;
+    background-color: rgb(255, 140, 0);
     color:black;
     text-align:center;
     padding:10px;
